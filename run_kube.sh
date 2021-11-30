@@ -1,11 +1,26 @@
 #!/usr/bin/env bash
-kubectl create -f ./my-namespace.yml # amend my-namespace.yml to 
-kubectl create -f deployment.yml
-kubectl create -f service.yml
-kubectl get all -n verify-cluster.
+
+# This uploads an image to Docker Hub using kubernetes
+
+# Step 1:
+# This is your Docker ID/path
+# dockerpath=<>
+dockerpath="dockerpath"
+
+# Step 2
+# Run the Docker Hub container with kubernetes
+kubectl run docker-repo-name --image=$dockerpath --port=port-number
+
+sleep 40s
+
+# Step 3:
+# List kubernetes pods
+kubectl get pods
+
+# Step 4:
+# Forward the container port to a host
+kubectl port-forward pod/docker-repo-name hostport:containerport 
 
 
-kubectl logs nginx
-
-
-docker stack deploy --namespace name_space --compose-file deployment.yml stack_name #amend name_space & stack_name
+# Get logs
+kubectl logs `kubectl get pods -o=name`
