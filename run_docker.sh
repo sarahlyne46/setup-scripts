@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
+# update docker if required
+# sudo apt-get update && sudo apt-get install docker.io -y
 
 # Build image
-docker build --tag=api .
+# update tag-name
+docker build --tag=tag-name .
 
 # List docker images
 docker image ls
 
-# Run flask app
-docker run -p 8000:5001 api
+# Run flask app in docker
+# update ports (-p) and tag-bane
+# docker run -p 8000:5001 tag-name
 
-
-sudo apt-get update && sudo apt-get install docker.io -y
