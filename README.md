@@ -1,24 +1,21 @@
-# setup-scripts
-
-README.md
+# setup-scripts  README.md
 
 Dockerfile
-
 Generic dockerfile
-a. create working directory
-b. copy app
-c. run installs
-d. expose port
-e. run command (CMD)
+ 1. create working directory
+ 2. copy app
+ 3. run installs
+ 4. expose port
+ 5. run command (CMD) 
 Update each element as required
 
 Makefile
 Generic Makefile
- a. setup virtual environment & source it
- b. install pre-requisites using requirements.txt
- c. confirm environment setup
- d. test environment (optional)
- e. lint docker and .py files as required
+ 1. setup virtual environment & source it
+ 2. install pre-requisites using requirements.txt
+ 3. confirm environment setup
+ 4. test environment (optional)
+ 5. lint docker and .py files as required
 
 
 Python application files
