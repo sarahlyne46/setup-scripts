@@ -2,7 +2,7 @@
 
 README.md
 
-Dockerfile
+# Dockerfile
 Generic dockerfile
  a. create working directory
  b. copy app
@@ -11,7 +11,7 @@ Generic dockerfile
  e. run command (CMD) 
 Update each element as required
 
-Makefile
+# Makefile
 Generic Makefile
  a. setup virtual environment & source it
  b. install pre-requisites using requirements.txt
@@ -20,7 +20,7 @@ Generic Makefile
  e. lint docker and .py files as required
 
 
-Python application files
+# Python application files
 The files use flask to create web pages. Flask will need to be imported into the environment, using the Makefile & requirements.txt files (step b).
 
 1. app.py: python file using flask to return Hello World! web page
@@ -30,14 +30,14 @@ The files use flask to create web pages. Flask will need to be imported into the
 The blueapp.py & greenapp.py files can be used to demonstrate a bluegreen deployment
 
 
-Yml files
+# Yml files
 
 1. config.yml: basic circleci config.yml file
 2. deployment.yml: generic docker deployment file
 3. service.yml: generic docker service file
 4. prometheus.yml: generic yml file for running prometheus server
 
-Bash Scripts
+# Bash Scripts
 
 Repeatable actions included in bash scripts.  Run these as ./filename.sh replacing filename with the script name.
 
