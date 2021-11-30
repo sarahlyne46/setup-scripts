@@ -40,16 +40,16 @@ Bash Scripts
 Repeatable actions included in bash scripts.  Run these as ./filename.sh replacing filename with the script name.
 
 1. setup-env.sh
-   a. creates blank Dockerfile and Makefile
-   b. Creates .circleci folder 
-   c. Creates blank config.file in circleci folder
+   - creates blank Dockerfile and Makefile
+   - creates .circleci folder 
+   - creates blank config.file in circleci folder
 2. Kube_setup.sh
-   a. Downloads and installs kubernetes 
-   b. Downloads and runs sha256sum checksum
-   c. Installs conntrack
-   d. Installs minikube
-   e. Changes to root user
-   f. Starts minikube as root user and confirms version
+   i. Downloads and installs kubernetes 
+   ii. Downloads and runs sha256sum checksum
+   iii. Installs conntrack
+   iv. Installs minikube
+   v. Changes to root user
+   vi. Starts minikube as root user and confirms version
 3. gitcommit.sh
    a. adds new files
    b. shows status
