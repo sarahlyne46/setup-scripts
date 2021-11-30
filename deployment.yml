@@ -1,25 +1,36 @@
-version: '3.3'
-
-kind: Namespace
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: my-app
-
-services:
-  web:
-    image: dockersamples/k8s-wordsmith-web
-    ports:
-     - "80:80"
-
-  words:
-    image: dockersamples/k8s-wordsmith-api
-    deploy:
-      replicas: 5
-      endpoint_mode: dnsrr
-      resources:
-        limits:
-          memory: 50M
-        reservations:
-          memory: 50M
-
-  db:
-    image: dockersamples/k8s-wordsmith-db
+  name: capstone-project-deployment
+  labels:
+    app: capstone-project-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: capstone-project-deployment
+  template:
+    metadata:
+      labels:
+        app: capstone-project-deployment
+    spec:
+      containers:
+        - name: capstone-project-deployment
+          image: sarahlyne46/capstone-project:greenv2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+            
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: capstone-project-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: capstone-project-deployment
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
