@@ -3,12 +3,13 @@
 README.md
 
 Dockerfile
+
 Generic dockerfile
  a. create working directory
  b. copy app
  c. run installs
  d. expose port
- e. run command (CMD) 
+ e. run command (CMD)
 Update each element as required
 
 Makefile
